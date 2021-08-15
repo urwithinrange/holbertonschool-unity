@@ -139,3 +139,4 @@ Received Import Request.
 Start importing Assets/Scenes/Materials/ball.mat using Guid(583e1c101b56cc446b6c1761bc1c02a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '038c611eea7d4e1419be819b58cadd1d') in 0.148335 seconds 
   Import took 0.154334 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
