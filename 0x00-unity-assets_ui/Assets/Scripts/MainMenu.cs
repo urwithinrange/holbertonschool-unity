@@ -4,19 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-    public void Level01 ()
+    public void LevelSelect(int level)
     {
-        SceneManager.LoadScene("Level01");
+        SceneManager.LoadScene(level);
     }
-    public void Level02 ()
+    public void Options()
     {
-        SceneManager.LoadScene("Level02");
+        SceneManager.LoadScene("Options");
     }
-    public void Level03 ()
-    {
-        SceneManager.LoadScene("level03");
-    }
-    public void Exit ()
+    public void QuitGame()
     {
         Debug.Log("QUIT");
         Application.Quit();
