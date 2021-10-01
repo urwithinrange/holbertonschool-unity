@@ -976,6 +976,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 36
       objectReference: {fileID: 0}
+    - target: {fileID: 1455886530845517496, guid: 93bcd2f8a5b3b364a89a3ee44bc7a3db, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1455886530845517498, guid: 93bcd2f8a5b3b364a89a3ee44bc7a3db, type: 3}
       propertyPath: m_Name
       value: OptionsText
@@ -1437,10 +1441,10 @@ RectTransform:
   m_Father: {fileID: 1540304087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.972534, y: -46.408844}
-  m_SizeDelta: {x: 1200, y: 700}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -100, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2079029424
 MonoBehaviour:
