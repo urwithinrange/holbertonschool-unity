@@ -973,6 +973,10 @@ PrefabInstance:
       value: Options
       objectReference: {fileID: 0}
     - target: {fileID: 1455886530845517496, guid: 93bcd2f8a5b3b364a89a3ee44bc7a3db, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455886530845517496, guid: 93bcd2f8a5b3b364a89a3ee44bc7a3db, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 36
       objectReference: {fileID: 0}
