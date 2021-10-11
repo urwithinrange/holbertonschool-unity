@@ -7,6 +7,17 @@ using UnityEngine.UI;
 public class OptionsMenu : MonoBehaviour
 {
     public Toggle inverted;
+    public void Start()
+    {
+        if (PlayerPrefs.GetInt("Inverted") ==1)
+        {
+            inverted.isOn = true;
+        }
+        else
+        {
+            inverted.isOn = false;
+        }
+    }
     public void Back()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("LastScene"));
