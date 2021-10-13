@@ -6,16 +6,19 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
+    public bool isInverted;
     public Toggle inverted;
     public void Start()
     {
-        if (PlayerPrefs.GetInt("Inverted") ==1)
+        if (PlayerPrefs.GetInt("Inverted") == 1)
         {
             inverted.isOn = true;
+            isInverted = true;
         }
         else
         {
             inverted.isOn = false;
+            isInverted = false;
         }
     }
     public void Back()
