@@ -13,6 +13,20 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 0.08f;
     public float gravity = -9.81f;
     
+<<<<<<< HEAD
+    public float distanceToGround = 1.25f; 
+
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
+    public Animator anim;
+    public PauseMenu pm;
+
+    void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
+
+=======
     public float distanceToGround = 0.4f; 
 
     public float turnSmoothTime = 0.1f;
@@ -20,6 +34,7 @@ public class PlayerController : MonoBehaviour
     
     public PauseMenu pm;
 
+>>>>>>> f17b7d9ecc892e4a3fa23c27baf52fc94ee7ee70
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -66,6 +81,10 @@ public class PlayerController : MonoBehaviour
     }
     bool isOnGround()
     {
+<<<<<<< HEAD
+        Debug.Log("is on ground");
+=======
+>>>>>>> f17b7d9ecc892e4a3fa23c27baf52fc94ee7ee70
         return Physics.Raycast(transform.position, Vector3.down, distanceToGround);
     }
 }
