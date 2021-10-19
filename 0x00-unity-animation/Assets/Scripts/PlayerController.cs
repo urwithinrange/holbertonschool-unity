@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     float turnSmoothVelocity;
     public Animator anim;
     public PauseMenu pm;
+    
+    public bool Run;
 
     void Start()
     {
@@ -47,12 +49,16 @@ public class PlayerController : MonoBehaviour
 
             if(direction.magnitude >= 0.1f)
             {
+                Run = true;
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 controller.Move(moveDir.normalized * playerSpeed * Time.deltaTime);
             }
+            else
+                Run = false;
+            anim.SetBool("Run", Run);
             if (Input.GetKey("space") && isOnGround())
             {
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);

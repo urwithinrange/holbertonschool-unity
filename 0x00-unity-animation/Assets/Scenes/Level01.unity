@@ -3639,21 +3639,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1143534893215602584, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143534893215602584, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d63cea41d56f4f342a1d5656722396ed, type: 2}
+    - target: {fileID: 1143534893215602584, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6091138761783226304, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6430729298555735522, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 6824135706530194122, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: pm
       value: 
       objectReference: {fileID: 298620587}
     - target: {fileID: 6824135706530194122, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: Run
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824135706530194122, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 6824135706530194122, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 5866666021909216657, guid: c7c562d297e03c14e94520097e578cce, type: 3}
     - target: {fileID: 6824135706530194124, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: FinalTime
       value: 
