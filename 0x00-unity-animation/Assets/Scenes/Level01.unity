@@ -286,7 +286,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8138801, y: 1}
+    m_SensorSize: {x: 2.2778702, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -368,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77844912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0, y: 9.25, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1129143012}
@@ -1562,7 +1562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.2723272, y: -0.000000016561204, z: 0.000000004684277, w: 0.9622047}
-  m_LocalPosition: {x: 0, y: 9, z: 0}
+  m_LocalPosition: {x: 0, y: 9.25, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1711,7 +1711,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965031566}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e5de1cd052294a14bb76b20efc175f82, type: 3}
   m_Controller: {fileID: 9100000, guid: 676e0e963b5a9914d9348338770aff49, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -1791,7 +1791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8138801, y: 1}
+    m_SensorSize: {x: 2.2778702, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8138801, y: 1}
+    m_SensorSize: {x: 2.2778702, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2735,7 +2735,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8138801, y: 1}
+    m_SensorSize: {x: 2.2778702, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3650,6 +3650,14 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1143534893215602584, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656507595891732203, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6091138761783226304, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3674,6 +3682,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 5866666021909216657, guid: c7c562d297e03c14e94520097e578cce, type: 3}
+    - target: {fileID: 6824135706530194122, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
+      propertyPath: jumpHeight
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6824135706530194124, guid: 1fd81a7be3cb5e9418a3fc0dac0d2a32, type: 3}
       propertyPath: FinalTime
       value: 

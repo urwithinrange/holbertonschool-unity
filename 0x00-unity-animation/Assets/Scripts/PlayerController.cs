@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 respawn = new Vector3(0, 0, 0);
     public Vector3 playerVelocity;
     public float playerSpeed = 8.0f;
-    public float jumpHeight = 0.08f;
+    public float jumpHeight = 3f;
     public float gravity = -9.81f;
     
     public float distanceToGround = 1.25f; 
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public PauseMenu pm;
     
     public bool Run;
+    public bool isGrounded;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
             float vertical = Input.GetAxisRaw("Vertical");
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
+            // Movment
             if(direction.magnitude >= 0.1f)
             {
                 Run = true;
@@ -59,9 +61,10 @@ public class PlayerController : MonoBehaviour
             else
                 Run = false;
             anim.SetBool("Run", Run);
+            // Jumping
             if (Input.GetKey("space") && isOnGround())
             {
-                playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+                playerVelocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
             if (playerVelocity.y > -9.81f)
                 playerVelocity.y += gravity * Time.deltaTime;
