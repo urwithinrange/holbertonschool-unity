@@ -10,7 +10,7 @@ public class WinTrigger : MonoBehaviour
     public Timer timer;
     public Text timerText;
     public GameObject WinCanvas;
-    public AudioSource BGM;
+    public AudioSource BGMl1;
     public AudioSource win;
 
     void OnTriggerEnter(Collider other)
@@ -23,7 +23,7 @@ public class WinTrigger : MonoBehaviour
             WinCanvas.SetActive(true);
             Time.timeScale = 0;
             timer.Win();
-            BGM.Stop();
+            BGMl1.Stop();
             win.Play();
         }
     }

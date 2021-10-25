@@ -13,15 +13,18 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 3f;
     public float gravity = -9.81f;
     
-    public float distanceToGround = 1.25f; 
+    // public float distanceToGround = 1.25f;
 
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+    
     public Animator anim;
     public PauseMenu pm;
-    
     public bool Run;
     public bool isGrounded;
+    public bool falling;
+    public AudioSource footSteps;
+    public AudioSource landing;
 
     void Start()
     {
@@ -49,8 +52,15 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
             if (isOnGround()) {
                 isGrounded = true;
+                anim.SetBool("Run", false);
+                // anim.SetBool("isGrounded", false);
+                if (!landing.isPlaying && falling == true) {
+                    falling = false;
+                    landing.Play();
+                    anim.SetBool("falling", false);
+                }
             }
-            else if (!isOnGround()){
+            else if (controller.isGrounded == false){
                 Debug.Log("isGrounded is false");
                 isGrounded = false;
             }
@@ -65,6 +75,9 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 controller.Move(moveDir.normalized * playerSpeed * Time.deltaTime);
+                if (isGrounded && !footSteps.isPlaying) {
+                    footSteps.Play();
+                }
             }
             else
                 Run = false;
@@ -86,6 +99,10 @@ public class PlayerController : MonoBehaviour
             if (transform.position.y < -10) 
             {
                 transform.position = respawn + new Vector3(0, 20, 0);
+                anim.SetBool("Run", true);
+                anim.SetBool("isGrounded", false);
+                anim.SetBool("falling", true);
+                falling = true;
                 transform.parent = null;
             }
         }
@@ -93,6 +110,8 @@ public class PlayerController : MonoBehaviour
     bool isOnGround()
     {
         // Debug.Log("is on ground");
-        return Physics.Raycast(transform.position, Vector3.down, distanceToGround);
+        // distanceToGround = GetComponent<Collider>().bounds.extents.y;
+        // return Physics.Raycast(transform.position, -Vector3.up, distanceToGround);
+        return controller.isGrounded;
     }
 }

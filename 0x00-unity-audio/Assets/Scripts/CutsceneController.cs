@@ -29,6 +29,7 @@ public class CutsceneController : MonoBehaviour
                 // gameObject.SetActive(false);
                 Camera.SetActive(false);
                 Player.gameObject.GetComponent<PlayerController>().enabled = true;
+                // Player.gameObject.GetComponent<AudioSource>().enabled = true;
                 Debug.Log("After intro");
             }
     }

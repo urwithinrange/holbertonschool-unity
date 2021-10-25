@@ -153,11 +153,14 @@ MonoBehaviour:
   respawn: {x: 0, y: 0, z: 0}
   playerVelocity: {x: 0, y: 0, z: 0}
   playerSpeed: 8
-  jumpHeight: 0.08
+  jumpHeight: 4
   gravity: -9.81
   distanceToGround: 1.25
   turnSmoothTime: 0.1
+  anim: {fileID: 5866666021909216657, guid: ca03d85d791cae64a96e5d6bd3eb6b64, type: 3}
   pm: {fileID: 0}
+  Run: 0
+  isGrounded: 1
 --- !u!114 &6824135706530194124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5de1cd052294a14bb76b20efc175f82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5de1cd052294a14bb76b20efc175f82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -229,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e5de1cd052294a14bb76b20efc175f82, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d63cea41d56f4f342a1d5656722396ed, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5de1cd052294a14bb76b20efc175f82, type: 3}
 --- !u!4 &6430729298555735522 stripped
