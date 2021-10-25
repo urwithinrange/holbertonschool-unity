@@ -476,13 +476,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1752004107}
   m_HandleRect: {fileID: 229571}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.001
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704229327}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetSFXVol
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &143506491
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +662,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704229327}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: SetBGMVol
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &221033246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInverted: 0
   inverted: {fileID: 1289175119}
+  bgm: {fileID: 177364633}
+  sfx: {fileID: 98604568}
+  master: {fileID: 24100000, guid: 6725a106ce6f68440b98343303d9be52, type: 2}
 --- !u!1 &793524975
 GameObject:
   m_ObjectHideFlags: 0
